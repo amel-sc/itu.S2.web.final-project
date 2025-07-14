@@ -125,3 +125,5 @@ INSERT INTO fn_emprunt (id_objet, id_membre, date_emprunt, date_retour) VALUES
 (33, 2, '2025-07-08', '2025-07-12'),
 (36, 3, '2025-07-09', '2025-07-19'),
 (40, 1, '2025-07-10', '2025-07-20');
+
+-- view 

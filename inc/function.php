@@ -1,7 +1,6 @@
 <?php
     require('connexion.php');
-    require("connexion.php");
-    require("gen_functions.php");
+    require("gen_function.php");
     
     // navigation link functions
     // function to create links
@@ -34,16 +33,14 @@
         return $index;
     }   
 
-    
-
-    // function web 
-    // login function
-    function login_function($email, $mdp)
+    // function to get emprunt by object
+    function get_current_emprunt($id_object)
     {
-        $sql = 'SELECT * FROM membre WHERE email = "%s" AND mdp = "%s"';
-        $sql = sprintf($sql, $email, $sql);
-        $query = mysqli_query(dbconnect(), $sql);
-        $exist = mysqli_num_rows($query);
-        if ()
+        $sql = 'SELECT * FROM fn_emprunt WHERE id_objet = "%s" and datediff(now() , date_retour) > 0';
+        $sql = sprintf($sql, $id_object);
+        $result = one_query($sql);
+
+        return $result;
     }
+
 ?>
