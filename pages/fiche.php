@@ -1,5 +1,5 @@
 <?php 
-    $objet = get_object($_GET['id']);
+    $objet = get_objet($_GET['id']);
 ?>
 <section>
     <div class="fiche d-flex">
