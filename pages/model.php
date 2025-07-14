@@ -1,5 +1,10 @@
 <?php
     require('../inc/function.php');
+    $pg='';
+    if (isset($_GET['page']) && ($_GET['page'] == "login.php" || $_GET['page'] =="inscription.php"))
+    {
+        $pg="login";
+    } 
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +17,7 @@
     <link rel="stylesheet" href="../assets/css/styles.css">
     <title>Final Exam</title>
 </head>
-<body>
+<body class="body_<?= $pg ?>">
     <header class="fixed-top header" style="z-index:100;">
         <?php $current_page = $_GET['page'] ?>
         <?php include("../inc/header.php") ?>
