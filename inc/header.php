@@ -40,6 +40,10 @@
                         <?php $value[$page_index]["value"] = "upload_object.php"; ?>
                         <a class="nav-link" aria-current="page" href="<?= navigation_link($value) ?>">Upload object</a>
                     </li>
+                    <li class="nav-item">
+                        <?php $value[$page_index]["value"] = "fiche_membre.php"; ?>
+                        <a class="nav-link" aria-current="page" href="<?= navigation_link($value) ?>">Membres</a>
+                    </li>
                 <?php } ?>  
             </ul>
         </div>

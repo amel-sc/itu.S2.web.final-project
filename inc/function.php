@@ -100,6 +100,14 @@
 
         return $result;
     }
+    // function get object
+    function get_objet_membre($id){
+        $sql = 'SELECT * FROM fn_v_objet_membre_categorie WHERE id_membre = "%s"';
+        $sql = sprintf($sql, $id);
+        $result = one_query($sql);
+
+        return $result;
+    }
 
     // function to get principal image
     function get_first_image($id_objet)
@@ -120,6 +128,26 @@
 
         return $result;
     }
+    
+    // function get emprunt by membre
+    function get_emprunt_by_membre($id_membre)
+    {
+        $sql = 'select * from fn_emprunt where id_membre = "%s"';
+        $sql = sprintf($sql, $id_membre);
+        $result = array_query($sql);
+
+        return $result;
+    }
+    
+    // function get emprunt by membre
+    function get_emprunt_by_membre_current($id_membre)
+    {
+        $sql = 'select * from fn_emprunt where id_membre = "%s"';
+        $sql = sprintf($sql, $id_membre);
+        $result = array_query($sql);
+
+        return $result;
+    }
 
     // function to get date emprunt and date retour
     function get_emprunt_return_date ($day_number)
@@ -133,4 +161,17 @@
 
         return $result;
     }
+
+    // function verif emprunt return
+    function verif_emprunt_return($id_emprunt){
+        $sql = 'SELECT * FROM fn_emprunt WHERE id_emprunt = "%s" AND datediff(date_retour, now()) > 0';
+        $sql = sprintf($sql, $id_emprunt);
+        $query = mysqli_query(dbconnect(), $sql);
+        $result = 0;
+        if(mysqli_num_rows($query) > 0){
+            $result = 1;
+        }
+        return $result;
+    }
+
 ?>
