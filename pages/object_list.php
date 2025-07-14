@@ -5,9 +5,9 @@
 
 <section>
     <div class="table-responsive">
-        <table class="table">
+        <table class="table table-hover">
             <thead>
-                <tr>
+                <tr class="table-dark">
                     <th scope="col">Object name</th>
                     <th scope="col">Return date</th>
                 </tr>

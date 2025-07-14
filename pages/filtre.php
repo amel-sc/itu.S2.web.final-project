@@ -13,7 +13,7 @@
             </select>
         </div>
         <input type="hidden" name="page" value="filtre.php">
-        <div class="d-grid gap-2">
+        <div class="d-grid gap-2 mb-3">
             <input type="submit" value="Sign Up" class="btn btn-primary">
         </div>
     </form>
@@ -29,9 +29,9 @@
             $list_objet = select_table("fn_objet", $value, null);
         }
     ?>
-    <table class="table">
+    <table class="table table-hover">
         <thead>
-            <tr>
+            <tr class="table-dark">
                 <th scope="col">Object name</th>
                 <th scope="col">Return date</th>
             </tr>
