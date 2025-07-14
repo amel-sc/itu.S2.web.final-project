@@ -43,6 +43,54 @@
         return $result;
     }
 
+    //uplaod image
+    function upload_image($file)
+    {
+        $upload_dir = dirname(__DIR__).'/assets/uploads/';
+        $max_size = 500 * 1024 * 1024;
+        $allowedMimeTypes = ['image/jpeg', 'image/png', 'image/jpg', 'video/mp4'];
+
+        if ($file['error'] !== UPLOAD_ERR_OK) {
+            die('Erreur lors de l’upload : ' . $file['error']);
+        }
+
+        // Vérifie la taille
+        if ($file['size'] > $max_size) {
+            die('Le fichier est trop volumineux.');
+        }
+
+        // Vérifie le type MIME avec `finfo`
+        $finfo = finfo_open(FILEINFO_MIME_TYPE);
+        $mime = finfo_file($finfo, $file['tmp_name']);
+        finfo_close($finfo);
+
+        if (!in_array($mime, $allowedMimeTypes)) {
+            die('Type de fichier non autorisé : ' . $mime);
+        }
+
+        // renommer le fichier
+        $originalName = pathinfo($file['name'], PATHINFO_FILENAME);
+        $extension = pathinfo($file['name'], PATHINFO_EXTENSION);
+
+        $newName = $originalName . '_' . uniqid() . '.' . $extension;
+
+        // Déplace le fichier
+        move_uploaded_file($file['tmp_name'], $upload_dir . $newName);
+
+        //add post in BDD
+        $file_path = '../assets/uploads/' . $newName;
+        return $file_path;
+    }
+
+    // function to get object by name, category and member
+    function get_object_cat_membre($nom_objet, $id_categorie, $id_membre)
+    {
+        $sql = 'SELECT * FROM fn_objet WHERE nom_objet = "%s" AND id_categorie = "%s" AND id_membre = "%s"';
+        $sql = sprintf($sql, $nom_objet, $id_categorie, $id_membre);
+        
+        return $sql;
+    }
+
 
     // function get object
     function get_objet($id){

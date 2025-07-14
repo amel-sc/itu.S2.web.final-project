@@ -36,6 +36,10 @@
                         <?php $value[$page_index]["value"] = "filtre.php"; ?>
                         <a class="nav-link" aria-current="page" href="<?= navigation_link($value) ?>">Object per Category</a>
                     </li>
+                    <li class="nav-item">
+                        <?php $value[$page_index]["value"] = "upload_object.php"; ?>
+                        <a class="nav-link" aria-current="page" href="<?= navigation_link($value) ?>">Uplaod object</a>
+                    </li>
                 <?php } ?>  
             </ul>
         </div>
