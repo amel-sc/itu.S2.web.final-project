@@ -1,0 +1,6 @@
+1- creer la database et les tables
+    -membres
+    -categorie_object
+    -object
+    -images_object
+    -emprunt

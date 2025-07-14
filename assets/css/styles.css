@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+}
+.vert{
+    color: #98e3da;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #22282f;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+table{
+    overflow: auto;
+}
+
+.line-text {
+    font-size: large;
+}
+/* main */
+main {
+    margin-top: 65px;
+}
+
+/* home */
+/* lien dans table */
+.text-link {
+    text-decoration: underline;
+}
+
+.text-arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.text-link:hover .text-arrow {
+    transform: translateX(6px);
+}
+
+/* lorick */
+.div-shadow{
+    box-shadow: 1px 2px 5px 2px rgba(45, 45, 45, 0.189);
+    border: 0px solid !important;
+}
+
+main{
+    flex: 1;
+}
+footer{
+    padding: 15px;
+}
+.border-grey{
+    border: 1px solid rgb(26, 26, 26) !important;
+}
+.recherche-form{
+    overflow: auto;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.recherche-form input  , .recherche-form select{
+    padding: 0px 10px 0px 10px;
+    height: 40px;
+    border:  1px solid rgb(236, 236, 236);
+    border-radius: 2px;
+    background-color: white;
+    color: rgb(75, 75, 75);
+}
+.recherche-form input[type="submit"]{
+    background-color: #34464d;
+    color: white;
+    border-radius: 30px;
+    width: auto;
+    padding: 15px 50px 15px 50px;
+    height: auto !important;
+    border: 0px solid;
+    font-weight: bold;
+}
+.recherche-form input[type="submit"]:hover{
+    background-color: #494949;
+}
+.bc-dark{
+    background-color: #323b47 !important;
+}
+.table-recherche{
+    overflow: visible;
+    min-width: max-content;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.nom_input{
+    width: 175px;
+    font-size:smaller !important;
+    background-color: rgba(240, 240, 240, 0.507);
+}
+.table-recherche td{
+    border:  1px solid rgb(236, 236, 236);
+    min-width: 175px;
+    padding: 10px;
+}
+.input_form input , .input_form select{
+    width: 100%;
+}
+header nav .menu{
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+}
+.menu-head{
+    font-size: smaller;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #323b47;
+    color: white;
+}
+.menu-head:hover{
+    background-color: #e2e2e211;
+    border-bottom: 3px solid #98e3da;
+    color: #98e3da;
+}
+.tb-home{
+    font-size: medium !important;
+    font-weight: bold;
+    min-width: 100px;
+}
+.scroll-container {
+  scrollbar-width: thin; /* Pour Firefox */
+  scrollbar-color: #7e7e7e4d #3f3f3f33; /* thumb + track */
+
+  /* Limite : Firefox seulement */
+}
+
+/* Pour WebKit (Chrome, Edge, Safari) */
+.scroll-container::-webkit-scrollbar {
+  height: 8px; /* hauteur pour scroll horizontal */
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: #22282f; /* couleur de fond de la piste */
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: #98e3da; /* couleur du curseur */
+  border-radius: 10px;
+}
+.page-link{
+    color: #3a3a3a;
+}
+.active .page-link{
+    color: white;
+    background-color: #323b47 !important;
+    border-color: #22282f !important;
+}
+
+/* div , body , header , footer , nav , main , section , p , h1 , h2 , h3 , a {
+    border: 1px solid white;
+} */
