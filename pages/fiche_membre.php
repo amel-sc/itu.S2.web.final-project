@@ -36,15 +36,17 @@
                                     <td class="table-line"><?= $item['date_emprunt'] ?></td>
                                     <td class="table-line"><?= $item['date_retour'] ?></td>
                                     <?php if(verif_emprunt_return($item['id_emprunt']) == 1) { ?>
-                                        <td class="table-line">
-                                            <form action="#" method='post'>
+                                        <form action="#" method='post'>
+                                            <td class="table-line">
                                                 <select name="etat" id="">
                                                     <option value="ok">OK</option>
-                                                    <option value="abimer">A BIMER</option>
+                                                    <option value="abimer">ABIMER</option>
                                                 </select>
-                                            </form>
-                                        </td>
-                                        <td class="table-line"></td>
+                                            </td>
+                                            <td class="table-line">
+                                                <input type="submit" name="return" value="Return" class="fs-5 fw-bold btn btn-primary">
+                                            </td>
+                                        </form>
                                     <?php } else { ?>
                                         <td></td>
                                         <td class="table-line"><span class="green m-auto">Returned</span></td>
