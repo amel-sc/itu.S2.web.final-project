@@ -33,3 +33,10 @@
     function :
 
 4. Amelioration de design
+
+6. Fiche object
+    page:
+        -fiche_obj.php:
+
+    function:
+        -get_objet($id)
