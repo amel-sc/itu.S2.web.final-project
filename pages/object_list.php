@@ -11,6 +11,7 @@
                 <tr class="table-dark">
                     <th scope="col">Object name</th>
                     <th scope="col">Return date</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -29,6 +30,7 @@
                                 </span>
                             <?php } ?>
                         </td>
+                        <td><a href="model.php?page=fiche.php&id=<?= $objet['id_objet'] ?>"> Fiche</a></td>
                     </tr>
                 <?php } ?>
             </tbody>
