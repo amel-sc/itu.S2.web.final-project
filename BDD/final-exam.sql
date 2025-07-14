@@ -128,4 +128,4 @@ INSERT INTO fn_emprunt (id_objet, id_membre, date_emprunt, date_retour) VALUES
 
 -- view 
 create or replace view as 
-(select o.id_objet, 0.id_membre, )
+(select o.id_objet, o.id_membre, )
