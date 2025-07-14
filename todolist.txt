@@ -1,6 +1,33 @@
-1- creer la database et les tables
+0- creer la database et les tables
     -membres
     -categorie_object
     -object
     -images_object
     -emprunt
+
+1- login et inscription
+    page : 
+        -login.php
+            -formulaire (email, mdp)
+        -traitement_login.php
+            -verify if exist (header home.php else header inscription.php)
+        -inscription.php
+            -formulaire (information user)
+        -traitement_inscription.php
+            -verify if exist (header incription.php else header home.php)
+    function :
+
+
+2- liste object
+    page : 
+        -object_list.php
+            -show list object + and if date_retour (if current emprunt) 
+    function : 
+        -function to get current emprunt
+
+3- filtre object 
+    page : 
+        -filtre.php
+            -select option to choose categorie_object + all categorie
+            -show object of one categorie
+    function :
