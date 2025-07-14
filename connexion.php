@@ -4,7 +4,7 @@ function dbconnect()
     static $connect = null;
     if($connect === null)
     {
-        $connect = mysqli_connect('localhost', 'root', '', 'final_exam');
+        $connect = mysqli_connect('localhost', 'ETU003938', 'wpZ2khWZ', 'db_s2_ETU003938');
 
         if(!$connect)
         {

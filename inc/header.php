@@ -38,7 +38,7 @@
                     </li>
                     <li class="nav-item">
                         <?php $value[$page_index]["value"] = "upload_object.php"; ?>
-                        <a class="nav-link" aria-current="page" href="<?= navigation_link($value) ?>">Uplaod object</a>
+                        <a class="nav-link" aria-current="page" href="<?= navigation_link($value) ?>">Upload object</a>
                     </li>
                 <?php } ?>  
             </ul>

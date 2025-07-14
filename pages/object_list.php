@@ -3,6 +3,7 @@
     $list_objet = select_table("fn_objet", null, null)
 ?>
 
+
 <section>
     <h2 class="text-primary">Object List</h2>
     <div class="table-responsive">
