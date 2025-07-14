@@ -4,9 +4,9 @@
 ?>
 
 <section>
-    <h2>Object List</h2>
+    <h2 class="text-primary">Object List</h2>
     <div class="table-responsive">
-        <table class="table table-hover">
+        <table class="table table-hover table-bordered table-striped">
             <thead>
                 <tr class="table-dark">
                     <th scope="col">Object name</th>
@@ -20,9 +20,13 @@
                         <th scope="row"><?= $objet['nom_objet'] ?></th>
                         <td>
                             <?php if($current_emprunt != null) { ?>
-                                <?= $current_emprunt['date_retour'] ?>
+                                <span class="green m-auto">
+                                    <?= $current_emprunt['date_retour'] ?>
+                                </span>
                             <?php } else { ?>
-                                Already returned  
+                                <span class="grisee">
+                                    Already returned  
+                                </span>
                             <?php } ?>
                         </td>
                     </tr>

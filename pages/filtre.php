@@ -4,7 +4,7 @@
 <section>
     <form action="model.php" method='get'>
         <div class="mb-3">
-            <label for="" class="form-label">Categories</label>
+            <label for="" class="form-label fw-bold fs-5 text-black">Categories</label>
             <select class="form-select" name="categ" aria-label="Default select example">
                 <option value="all">All Categories</option>
                 <?php foreach($categories as $category) {?>
@@ -14,7 +14,7 @@
         </div>
         <input type="hidden" name="page" value="filtre.php">
         <div class="d-grid gap-2 mb-3">
-            <input type="submit" value="Validate" class="btn btn-primary">
+            <input type="submit" value="Validate" class="fs-5 fw-bold btn btn-primary">
         </div>
     </form>
 </section>
@@ -29,8 +29,8 @@
             $list_objet = select_table("fn_objet", $value, null);
         }
     ?>
-    <h2>Object List</h2>
-    <table class="table table-hover">
+    <h2 class="">Object List</h2>
+    <table class="table table-hover table-bordered table-striped">
         <thead>
             <tr class="table-dark">
                 <th scope="col">Object name</th>

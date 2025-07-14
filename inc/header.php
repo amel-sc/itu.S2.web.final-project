@@ -17,7 +17,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav me-auto gap-3 mb-2 mb-lg-0">
                 <li class="nav-item">
                     <?php $value[$page_index]["value"] = "inscription.php"; ?>
                     <a class="nav-link" aria-current="page" href="<?= navigation_link($value) ?>">Sign in</a>

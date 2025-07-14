@@ -5,6 +5,10 @@ body{
     margin: 0;
     padding: 0;
     min-height: 100vh;
+    background: linear-gradient(rgb(205, 247, 240) , rgb(187, 232, 240));
+}
+tr{
+  min-height: 35px;
 }
 .body_login{
     background: linear-gradient(rgb(0, 128, 107) , rgb(0, 103, 121));
@@ -25,7 +29,23 @@ main {
   padding: 20px;
   color: white;
 }
+.link-blue{
+  color: rgb(122, 202, 255);
+  font-weight: bold;
+}
 
+/* liste */
+.green{
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  padding: 5px 15px 5px 15px;
+  border-radius: 10px;
+}
+.grisee{
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.664);
+}
 
 /* 
 body , div , main ,section{
