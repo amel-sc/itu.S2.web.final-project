@@ -127,7 +127,7 @@ INSERT INTO fn_emprunt (id_objet, id_membre, date_emprunt, date_retour) VALUES
 (40, 1, '2025-07-10', '2025-07-20');
 
 -- view 
-create or replace view as 
-(select o.id_objet, o.id_membre, )
-create or replace view v_objet_emp as 
-(SELECT * FROM fn_objet )
+create or replace view fn_v_objet_membre_categorie as 
+(select o.id_objet, o.nom_objet, o.id_categorie, o.id_membre, c.nom_categorie, m.nom, m.birth_date, m.genre, m.ville, m.mdp, m.image_profil from fn_objet o
+join fn_membre m on m.id_membre = o.id_membre
+join fn_categorie_objet c on c.id_categorie = o.id_categorie);

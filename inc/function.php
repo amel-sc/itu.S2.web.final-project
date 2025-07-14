@@ -87,17 +87,37 @@
     {
         $sql = 'SELECT * FROM fn_objet WHERE nom_objet = "%s" AND id_categorie = "%s" AND id_membre = "%s"';
         $sql = sprintf($sql, $nom_objet, $id_categorie, $id_membre);
-        
+
         return $sql;
     }
 
 
     // function get object
     function get_objet($id){
-        $sql = 'SELECT * FROM fn_objet WHERE id_objet = '.$id;
-        $query = mysqli_query(dbconnect() , $sql);
-        $result = mysqli_fetch_assoc($query);
-        mysqli_free_result($query);
+        $sql = 'SELECT * FROM fn_v_objet_membre_categorie WHERE id_objet = "%s"';
+        $sql = sprintf($sql, $id);
+        $result = one_query($sql);
+
+        return $result;
+    }
+
+    // function to get principal image
+    function get_first_image($id_objet)
+    {
+        $sql = 'select * from fn_images_objet where id_objet = "%s"';
+        $sql = sprintf($sql, $id_objet);
+        $result = one_query($sql);
+
+        return $result;
+    }
+
+    // function get emprunt by objet
+    function get_emprunt_by_objet($id_objet)
+    {
+        $sql = 'select * from fn_emprunt where id_objet = "%s"';
+        $sql = sprintf($sql, $id_objet);
+        $result = array_query($sql);
+
         return $result;
     }
 ?>
