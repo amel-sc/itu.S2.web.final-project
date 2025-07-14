@@ -22,7 +22,9 @@
         $insert_values[] = array('key' => "id_objet", 'value' => $id_objet);
         $insert_values[] = array('key' => "id_membre", 'value' => $id_membre);
         $insert_values[] = array('key' => "date_emprunt", 'value' => $dates['date_emprunt']);
-        $insert_values[] = array('key' => "date_retour", 'value' => $dates['date_retour']); 
+        $insert_values[] = array('key' => "date_retour", 'value' => $dates['date_retour']);
+        // insert value into table
+        insert_table($insert_values);
 
         // header
         $link[$page_index]['value'] = "object_list.php";
