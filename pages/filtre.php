@@ -3,14 +3,19 @@
 ?>
 <section>
     <form action="model.php" method='get'>
-        <input type="hidden" name="page" value="filtre.php">
-        <select name="categ" id="">
-            <option value="all">All Categories</option>
-            <?php foreach($categories as $category) {?>
+        <div class="mb-3">
+            <label for="" class="form-label">Gender</label>
+            <select class="form-select" name="categ" aria-label="Default select example">
+                <option value="all">All Categories</option>
+                <?php foreach($categories as $category) {?>
                     <option value="<?= $category['id_categorie'] ?>"><?= $category['nom_categorie'] ?></option>
                 <?php } ?>
-        </select>
-        <input type="submit" value="Filter">
+            </select>
+        </div>
+        <input type="hidden" name="page" value="filtre.php">
+        <div class="d-grid gap-2">
+            <input type="submit" value="Sign Up" class="btn btn-primary">
+        </div>
     </form>
 </section>
 <section>

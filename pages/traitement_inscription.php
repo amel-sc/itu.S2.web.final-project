@@ -39,7 +39,7 @@
             // insert into the database
             $result = insert_table('fn_membre', $value);
             // link
-            $link[$page_index]['value'] = 'home.php';
+            $link[$page_index]['value'] = 'login.php';
             header('Location: ' . navigation_link($link));
         }
         

@@ -14,6 +14,7 @@
 </head>
 <body>
     <header class="fixed-top header" style="z-index:100;">
+        <?php $current_page = $_GET['page'] ?>
         <?php include("../inc/header.php") ?>
     </header>
     <main class="container">

@@ -7,8 +7,12 @@
 ?>
 <nav class="navbar navbar-expand-lg bg-dark vw-100" data-bs-theme="dark"> 
     <div class="container-fluid">
-        <?php $value[$page_index]["value"] = "home.php"; ?>
-        <a class="navbar-brand" href="<?= navigation_link($value) ?>">Home</a>
+        <?php if ($current_page == "login.php" || $current_page == "inscription.php") { ?>
+            <a class="navbar-brand" href="#">Home</a>
+        <?php } else { ?>
+            <?php $value[$page_index]["value"] = "home.php"; ?>
+            <a class="navbar-brand" href="<?= navigation_link($value) ?>">Home</a>
+        <?php } ?>  
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -22,14 +26,17 @@
                     <?php $value[$page_index]["value"] = "login.php"; ?>
                     <a class="nav-link" href="<?= navigation_link($value) ?>">Login</a>
                 </li>
-                <li class="nav-item">
-                    <?php $value[$page_index]["value"] = "object_list.php"; ?>
-                    <a class="nav-link" aria-current="page" href="<?= navigation_link($value) ?>">Object list</a>
-                </li>
-                <li class="nav-item">
-                    <?php $value[$page_index]["value"] = "filtre.php"; ?>
-                    <a class="nav-link" aria-current="page" href="<?= navigation_link($value) ?>">Object per Category</a>
-                </li>
+                <?php if ($current_page == "login.php" || $current_page == "inscription.php") { ?>
+                <?php } else { ?>
+                    <li class="nav-item">
+                        <?php $value[$page_index]["value"] = "object_list.php"; ?>
+                        <a class="nav-link" aria-current="page" href="<?= navigation_link($value) ?>">Object list</a>
+                    </li>
+                    <li class="nav-item">
+                        <?php $value[$page_index]["value"] = "filtre.php"; ?>
+                        <a class="nav-link" aria-current="page" href="<?= navigation_link($value) ?>">Object per Category</a>
+                    </li>
+                <?php } ?>  
             </ul>
         </div>
     </div>

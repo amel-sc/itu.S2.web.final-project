@@ -1,3 +1,4 @@
 <section>
-    <h1>LK is here</h1>
+    <h1>Welcome <?= $_SESSION['current_user']['nom'] ?></h1>
+    
 </section>
