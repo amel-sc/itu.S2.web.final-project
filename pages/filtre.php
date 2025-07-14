@@ -14,7 +14,7 @@
         </div>
         <input type="hidden" name="page" value="filtre.php">
         <div class="d-grid gap-2 mb-3">
-            <input type="submit" value="Sign Up" class="btn btn-primary">
+            <input type="submit" value="Validate" class="btn btn-primary">
         </div>
     </form>
 </section>
