@@ -127,3 +127,5 @@ INSERT INTO fn_emprunt (id_objet, id_membre, date_emprunt, date_retour) VALUES
 (40, 1, '2025-07-10', '2025-07-20');
 
 -- view 
+create or replace view v_objet_emp as 
+(SELECT * FROM fn_objet )

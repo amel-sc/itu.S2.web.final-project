@@ -4,7 +4,7 @@
 <section>
     <div class="fiche d-flex">
         <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
+            <img src="..." class="card-img-top image" alt="Images">
             <div class="card-body">
             <p class="card-text"><b>Nom : </b> <?= $objet['nom_objet']?></p>
             </div>

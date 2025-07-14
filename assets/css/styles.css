@@ -47,6 +47,14 @@ main {
   color: rgba(0, 0, 0, 0.664);
 }
 
+/* fiche */
+.image{
+  min-width: 250px;
+  min-height: 200px;
+  background-color: rgb(224, 224, 224);
+}
+
+
 /* 
 body , div , main ,section{
   border: 1px solid red;
