@@ -4,6 +4,7 @@
 ?>
 
 <section>
+    <h2>Object List</h2>
     <div class="table-responsive">
         <table class="table table-hover">
             <thead>

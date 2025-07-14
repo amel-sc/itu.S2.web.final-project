@@ -29,6 +29,7 @@
             $list_objet = select_table("fn_objet", $value, null);
         }
     ?>
+    <h2>Object List</h2>
     <table class="table table-hover">
         <thead>
             <tr class="table-dark">
