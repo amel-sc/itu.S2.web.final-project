@@ -126,6 +126,50 @@ INSERT INTO fn_emprunt (id_objet, id_membre, date_emprunt, date_retour) VALUES
 (36, 3, '2025-07-09', '2025-07-19'),
 (40, 1, '2025-07-10', '2025-07-20');
 
+
+-- insert images
+INSERT INTO fn_images_objet (id_objet, nom_image)
+VALUES (1, '../assets/images/user.png'),
+(2, '../assets/images/user.png'),
+(3, '../assets/images/user.png'),
+(4, '../assets/images/user.png'),
+(5, '../assets/images/user.png'),
+(6, '../assets/images/user.png'),
+(7, '../assets/images/user.png'),
+(8, '../assets/images/user.png'),
+(9, '../assets/images/user.png'),
+(10, '../assets/images/user.png'),
+(11, '../assets/images/user.png'),
+(12, '../assets/images/user.png'),
+(13, '../assets/images/user.png'),
+(14, '../assets/images/user.png'),
+(15, '../assets/images/user.png'),
+(16, '../assets/images/user.png'),
+(17, '../assets/images/user.png'),
+(18, '../assets/images/user.png'),
+(19, '../assets/images/user.png'),
+(20, '../assets/images/user.png'),
+(21, '../assets/images/user.png'),
+(22, '../assets/images/user.png'),
+(23, '../assets/images/user.png'),
+(24, '../assets/images/user.png'),
+(25, '../assets/images/user.png'),
+(26, '../assets/images/user.png'),
+(27, '../assets/images/user.png'),
+(28, '../assets/images/user.png'),
+(29, '../assets/images/user.png'),
+(30, '../assets/images/user.png'),
+(31, '../assets/images/user.png'),
+(32, '../assets/images/user.png'),
+(33, '../assets/images/user.png'),
+(34, '../assets/images/user.png'),
+(35, '../assets/images/user.png'),
+(36, '../assets/images/user.png'),
+(37, '../assets/images/user.png'),
+(38, '../assets/images/user.png'),
+(39, '../assets/images/user.png'),
+(40, '../assets/images/user.png');
+
 -- view 
 create or replace view fn_v_objet_membre_categorie as 
 (select o.id_objet, o.nom_objet, o.id_categorie, o.id_membre, c.nom_categorie, m.nom, m.birth_date, m.genre, m.ville, m.mdp, m.image_profil from fn_objet o
