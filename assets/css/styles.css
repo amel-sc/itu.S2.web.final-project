@@ -6,9 +6,28 @@ body{
     padding: 0;
     min-height: 100vh;
 }
+.body_login{
+    background: linear-gradient(rgb(0, 128, 107) , rgb(0, 103, 121));
+}
 
 /* main */
 main {
     margin-top: 65px;
+    min-height: 90vh;
 }
 
+/* Login */
+.form-login{
+  background: rgba(255, 255, 255, 0.2); /* Fond semi-transparent */
+  backdrop-filter: blur(10px); /* Le flou */
+  -webkit-backdrop-filter: blur(10px); /* Compatibilité Safari */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  color: white;
+}
+
+
+/* 
+body , div , main ,section{
+  border: 1px solid red;
+} */

@@ -31,3 +31,5 @@
             -select option to choose categorie_object + all categorie
             -show object of one categorie
     function :
+
+4. Amelioration de design
