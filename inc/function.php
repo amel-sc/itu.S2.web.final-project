@@ -43,4 +43,13 @@
         return $result;
     }
 
+
+    // function get object
+    function get_objet($id){
+        $sql = 'SELECT * FROM fn_objet WHERE id_objet = '.$id;
+        $query = mysqli_query(dbconnect() , $sql);
+        $result = mysqli_fetch_assoc($query);
+        mysqli_free_result($query);
+        return $result;
+    }
 ?>
