@@ -36,7 +36,7 @@
     // function to get emprunt by object
     function get_current_emprunt($id_object)
     {
-        $sql = 'SELECT * FROM fn_emprunt WHERE id_objet = "%s" and datediff(curdate() , date_retour) > 0';
+        $sql = 'SELECT * FROM fn_emprunt WHERE id_objet = "%s" and date_retour > curdate()';
         $sql = sprintf($sql, $id_object);
         $result = one_query($sql);
 
