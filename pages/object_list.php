@@ -33,10 +33,13 @@
                             <?php } ?>
                         </td>
                         <td>
+                            <?php if($current_emprunt != null) { ?>
+                            <?php } else { ?>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addDayNumber">
+                                    Emprunt object
+                                </button>
+                            <?php } ?>
                             <!-- button to change department -->
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addDayNumber">
-                                Emprunt object
-                            </button>
                         </td>
                         <section>
                             <div class="modal fade" id="addDayNumber"> data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
