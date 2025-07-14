@@ -4,7 +4,7 @@
 <section>
     <form action="model.php" method='get'>
         <div class="mb-3">
-            <label for="" class="form-label">Gender</label>
+            <label for="" class="form-label">Categories</label>
             <select class="form-select" name="categ" aria-label="Default select example">
                 <option value="all">All Categories</option>
                 <?php foreach($categories as $category) {?>
