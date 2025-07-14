@@ -36,7 +36,7 @@
     // function to get emprunt by object
     function get_current_emprunt($id_object)
     {
-        $sql = 'SELECT * FROM fn_emprunt WHERE id_objet = "%s" and datediff(now() , date_retour) > 0';
+        $sql = 'SELECT * FROM fn_emprunt WHERE id_objet = "%s" and datediff(curdate() , date_retour) > 0';
         $sql = sprintf($sql, $id_object);
         $result = one_query($sql);
 
@@ -117,6 +117,19 @@
         $sql = 'select * from fn_emprunt where id_objet = "%s"';
         $sql = sprintf($sql, $id_objet);
         $result = array_query($sql);
+
+        return $result;
+    }
+
+    // function to get date emprunt and date retour
+    function get_emprunt_return_date ($day_number)
+    {
+        $sql = 'select curdate() as date_emprunt';
+        $result['date_emprunt'] = one_query($sql)['date_emprunt'];
+
+        $sql = 'select date_add(curdate(), interval %s day) as date_retour';
+        $sql = sprintf($sql, $day_number);
+        $result['date_retour'] = one_query($sql)['date_retour'];
 
         return $result;
     }
